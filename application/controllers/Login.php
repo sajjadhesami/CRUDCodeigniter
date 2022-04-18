@@ -26,9 +26,8 @@ class Login extends CI_Controller
 					"logged_in" => TRUE
 				);
 				$this->session->set_userdata($user_data);
-//				$this->session->unset_userdata('user_name');
-				$data["title"] = $this->session->userdata("user_name") . "/" . $this->session->userdata("user_id") .
-					"/" . $this->session->userdata("logged_in");
+				redirect("posts");
+//				$this->session->unset_userdata('user_name');				
 				$this->load->view('login', $data);
 				$this->load->view('templates/footer');
 			}
