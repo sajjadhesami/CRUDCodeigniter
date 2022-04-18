@@ -4,7 +4,10 @@ class Register extends CI_Controller
 {
 	public function index()
 	{
-
+		if(isset($this->session->userdata['logged_in']))
+		{
+			redirect("posts");				
+		}
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">', '</div>');
 		$this->form_validation->set_rules("user_name", "User Name", "required");
 		$this->form_validation->set_rules("user_pass", "User Password", "required");
