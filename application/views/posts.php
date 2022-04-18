@@ -27,8 +27,8 @@ else{?>
 				<div class="card-body">
                     <input type="text" class="form-control" placeholder="Title"/><br/>
                     <textarea type="text" class="form-control" placeholder="Body"></textarea>
-                    <br/><div class="d-flex mx-4 mb-3 mb-lg-4">
-						<button type="submit" class="btn btn-primary btn-lg">Register</button>
+                    <br/><div class="justify-content-center d-flex mx-4 mb-3 mb-lg-4">
+						<button type="submit" class="btn btn-primary btn-lg">add post</button>
 					</div>
                 </div>
             </div>
