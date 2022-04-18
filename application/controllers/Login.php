@@ -4,7 +4,10 @@ class Login extends CI_Controller
 {
 	public function index()
 	{
-
+		if(isset($this->session->userdata['logged_in']))
+		{
+			redirect("posts");				
+		}
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">', '</div>');
 		$this->form_validation->set_rules("user_name", "User Name", "required");
 		$this->form_validation->set_rules("pass", "User Password", "required");
@@ -27,7 +30,7 @@ class Login extends CI_Controller
 				);
 				$this->session->set_userdata($user_data);
 				redirect("posts");
-//				$this->session->unset_userdata('user_name');				
+
 				$this->load->view('login', $data);
 				$this->load->view('templates/footer');
 			}

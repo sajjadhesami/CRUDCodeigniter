@@ -26,8 +26,5 @@
 			}else{
 				return FALSE;
 			}
-//			$this->db->insert("TBL_USERS",$data);
-//			$php_errormsg=$this->db->error();
-//			return $php_errormsg;
 		}
 	}

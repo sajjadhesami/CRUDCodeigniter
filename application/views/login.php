@@ -1,6 +1,7 @@
 <br/>
 <br/>
 <br/>
+<div class="container">
 <h1 class="text-center">
 	<?php
 	echo $title;
@@ -43,3 +44,4 @@
 	<p>Not a member? <a href="<?php echo base_url(); ?>register">Register</a></p>
 </div>
 </form>
+</div>

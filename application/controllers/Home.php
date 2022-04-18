@@ -3,7 +3,10 @@
 class Home extends CI_Controller
 {
 	public function index(){
-
+		if(isset($this->session->userdata['logged_in']))
+		{
+			redirect("posts");				
+		}
 		$this->load->view('templates/header');
 		$data["title"]="Welcome to Simple CodeIgniter CMS";
 		$this->load->view('home',$data);
