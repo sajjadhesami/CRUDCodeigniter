@@ -27,4 +27,15 @@
 				return FALSE;
 			}
 		}
+		public function getUserName($user_id){
+			$this->db->select("*");
+			$this->db->from("TBL_USERS");
+			$this->db->where('USER_ID', $user_id);			
+			$query=$this->db->get();
+			if($query->num_rows()===1){
+				return $query->row(0)->USERNAME;
+			}else{
+				return FALSE;
+			}
+		}
 	}
