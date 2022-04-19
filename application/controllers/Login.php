@@ -22,11 +22,13 @@ class Login extends CI_Controller
 				$this->load->view('login', $data);
 				$this->load->view('templates/footer');
 			} else {
-				$this->load->view('templates/header');
+				$this->load->view('templates/header');				
+				$type=$this->User_Model->checkUserType($res);
 				$user_data = array(
 					"user_name" => $this->input->post()["user_name"],
 					"user_id" => $res,
-					"logged_in" => TRUE
+					"logged_in" => TRUE,
+					"user_type" => $type
 				);
 				$this->session->set_userdata($user_data);
 				redirect("posts");
