@@ -50,7 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-$route['SimpleCodeigniterCMS/posts/editpost/(:any)']="SimpleCodeigniterCMS/posts/editpost/(:any)";
-$route['SimpleCodeigniterCMS/posts/deletepost/(:any)']="SimpleCodeigniterCMS/posts/deletepost/(:any)";
+$route['CRUDCodeigniter/posts/editpost/(:any)']="CRUDCodeigniter/posts/editpost/(:any)";
+$route['CRUDCodeigniter/posts/deletepost/(:any)']="CRUDCodeigniter/posts/deletepost/(:any)";
+$route['CRUDCodeigniter/users_setting/makeadmin/(:any)']="CRUDCodeigniter/users_setting/makeadmin/(:any)/(:any)";
+$route['CRUDCodeigniter/users_setting/deleteuser/(:any)']="CRUDCodeigniter/users_setting/deleteuser/(:any)";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

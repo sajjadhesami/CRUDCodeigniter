@@ -8,7 +8,7 @@ class Home extends CI_Controller
 			redirect("posts");				
 		}
 		$this->load->view('templates/header');
-		$data["title"]="Welcome to Simple CodeIgniter CMS";
+		$data["title"]="Welcome to CRUD Codeigniter";
 		$this->load->view('home',$data);
 		$this->load->view('templates/footer');
 	}

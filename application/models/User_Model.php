@@ -52,4 +52,26 @@
 				return FALSE;
 			}
 		}
-	}
+		public function deleteUser($user_id){				
+			$this->db->where("USER_ID",$user_id);
+			$this->db->delete("TBL_USERS");
+			$php_errormsg=$this->db->error();
+			return $php_errormsg['code'];
+		}
+		public function updateUser($user_id,$isAdmin){
+			$data=array(				
+				'USER_TYPE' => $isAdmin
+			);
+			$this->db->where("USER_ID",$user_id);
+			$this->db->update("TBL_USERS",$data);
+			$php_errormsg=$this->db->error();
+			return $php_errormsg['code'];
+		}
+		public function getAllUsers(){
+			$this->db->select("*");
+			$this->db->from("TBL_USERS");				
+			$query=$this->db->get();				
+			return $query->result_array();				
+		}
+
+}
